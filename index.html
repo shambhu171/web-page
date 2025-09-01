@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shambhu's Webpage</title>
+  <link rel="stylesheet" href="style2.css"/>
+
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#" id="home-btn">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="#">Pages ▾</a>
+        <div class="dropdown-content">
+          <a href="page1.html">Page 1</a>
+          <a href="page2.html">Page 2</a>
+          <a href="page3.html">Page 3</a>
+        </div>
+      </li>
+      <li class="search-box">
+        <input type="text" placeholder="Search..." />
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <div class="photo-container" id="circle">
+    <img src="icone.png.png" alt="Shambhu's Logo">
+    <div class="overlay-text">
+      <h1>Hello,<br><span>Guys This is Shambhu. 😊</span></h1>
+    </div>
+  </div>
+
+  <!-- Social Section Heading -->
+  <div class="overlay-text2">
+    <h1>This is my social pages</h1>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="overlay-text3">
+    <form action="save.html" method="get">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="username" placeholder="Enter your name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="useremail" placeholder="Enter your email" required> 
+
+  <label for="message">Message</label>
+  <textarea id="message" name="usermessage" placeholder="Enter your message" required></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+
+  </div>
+  
+  <!-- Social Links with Icons -->
+  <div class="social-links">
+    <a href="https://www.facebook.com/shambhu_789" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://www.instagram.com/shambhu__101/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://twitter.com/ShambhuOf" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+    <a href="https://www.linkedin.com/in/shambhu-official-5b4b8923b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://www.youtube.com/channel/UC1234567890" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <img src="icone.png.png" alt="Website Logo" class="footer-logo">
+    <p>&copy; <span id="year"></span> Shambhu. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Smooth scroll for Home button
+    document.getElementById("home-btn").addEventListener("click", function(e) {
+      e.preventDefault(); 
+      document.getElementById("circle").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    });
+
+    // Auto update current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
